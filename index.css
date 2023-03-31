@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.product{ 
+    margin-top: 35%;
+    background-color: #D8D8D8;
+    width: 250px;
+    height: 300px;
+    margin-inline: 1rem;
+    border-radius: 10px;
+}
+
+.image{
+    max-width: 80%;
+    padding-top: 2.7rem;
+    padding-bottom: 2rem;
+}
+
+.main{
+    display: grid;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    justify-content: space-around;
+    align-content: end;
+}
+
+.grid-container-product > :nth-child(1) {
+    grid-area: one;
+}
+
+.grid-container-product > :nth-child(2) {
+    grid-area: two;
+}
+
+.grid-container-product > :nth-child(3) {
+    grid-area: three;
+}
+
+.grid-container-product > :nth-child(4) {
+    grid-area: four;
+}
+
+.grid-container-product{
+    grid-template-areas: 
+    ' one '
+    ' two '
+    ' three '
+    ' four ';
+}
+
+@media (min-width: 40rem) {
+    .grid-container-product{
+        grid-template-areas: 
+        ' one two  '
+        ' three four';
+    }
+}
+
+@media (min-width: 50rem){
+    .grid-container-product{
+        grid-template-areas: 
+        ' one two three '
+        '. four .';
+    }
+}
+
+@media (min-width: 77.8rem){
+    .grid-container-product{
+        grid-template-areas: 
+        ' one two three four ';
+    }
+}
+
+
+#airbuds-image{
+    margin-bottom: 0;
+}
